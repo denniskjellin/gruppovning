@@ -37,6 +37,21 @@ if (isset($_POST['todo'])) {
         <input class="addTodoBtn" type="submit" name="submit" value="Add Todo">
     </form>
 
+    <article>
+<?php
+//anslut till databasen
+$db = mysqli_connect('localhost', 'grupp', 'password', 'grupp') or die ('Fel vid anslutning');
+//sql fråga för att läsa ut allt (*) från tabellen
+$sql = "SELECT * FROM todos";
+$result = mysqli_query($db, $sql) or die ("fel vid ansnmsns");
+
+while ($row = mysqli_fetch_array($result)) {
+    echo $row['description'];
+}
+
+
+?>
+    </article>
 
 
 
