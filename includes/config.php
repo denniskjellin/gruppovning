@@ -5,9 +5,24 @@ spl_autoload_register(function ($class_name) {
 // Utseende på title
 $site_title = "Dennis Webb ";
 $divider = " | ";
+?>
 
-// Aktivera felrapportering
+<?php
+//Developer mode on/off (true or false)
+$devmode = true; 
+
+if($devmode) {
 error_reporting(-1);
 ini_set("display_errors", 1);
+
+//Database settings local
+define("DBHOST", "localhost");
+define("DBUSER", "grupp");
+define("DBPASS", "password");
+define("DBDATABASE", "grupp");
+
+} else {
+    // Database setiings posted
+}
 
 ?>
