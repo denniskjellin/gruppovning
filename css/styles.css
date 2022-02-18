@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* color of the body*/
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+
+header,
+footer,
+main {
+    width: 100%;
+}
+
+main {
+    /* backg-color of main content*/
+    background-color: #ffffff;
+    /* max-width of content area*/
+    max-width: 1200px;
+    /* margin/padding to give air to the page and margin to nav/footer elements*/
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: .9rem .9rem 4rem .9rem;
+    /* line height for page*/
+    line-height: 1.6;
+    /* letter spacing, to give minimal air between letters*/
+    letter-spacing: .02rem;
+    flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+.todolist article {
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 0.5em;
+}
+
+
+/* Logotype-box, styles the size of logotype.*/
+
+#logotype-box {
+    height: 3.75rem;
+    min-width: 10rem;
+    margin: .5rem;
+    margin-left: 1rem;
+    margin-right: -2rem;
+}
+
+
+/*a class, to hide elements*/
+
+.empty {
+    display: none;
+}
+
+.errorMsg {
+    color: red;
+}
+
+
+/* navbar styling starts here*/
+
+.navbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-color: black;
+    background-color: white;
+    border-bottom: rgb(190, 184, 184) solid 0.1px;
+    color: black;
+    width: 100%;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 2rem 1rem 2rem;
+    display: block;
+}
+
+.navbar-links li a:hover {
+    color: white;
+    border-radius: 8px;
+    background-color: #354F52;
+    transition: all 0.4s ease-out;
+}
+
+
+/* hamburger button*/
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.7rem;
+}
+
+.toggle-button .bar {
+    height: .2rem;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.625rem;
+}
+
+
+/* end of navbar*/
+
+
+/* different container elements goes in here*/
+
+
+/* main flexbox-container*/
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+/* items inside a flexbox-container*/
+
+.flexbox-item {
+    margin: 0rem .8rem 0rem .8rem;
+    width: 50%;
+}
+
+.flexbox-item-wide {
+    margin: 0rem .8rem 0rem .8rem;
+    width: 100%;
+}
+
+.styled-section {
+    border: solid rgba(0, 0, 0, 0.473) 1px;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.styled-section:hover {
+    background-color: #354f5231;
+    transition: 0.3s ease-out;
+}
+
+
+/* form */
+
+
+/*padding: .8rem 10rem .8rem 10rem;*/
+
+.input-addTodo {
+    padding: .8rem 10rem .8rem .5rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    max-width: 30rem;
+    text-align: start;
+}
+
+.input-addTodo:hover {
+    border-radius: 8px;
+    background-color: #354f5236;
+    transition: all 0.4s ease-out;
+}
+
+.article-todo:hover {
+    border-radius: 8px;
+    background-color: #354f5236;
+    transition: all 0.4s ease-out;
+    border: solid black 1px;
+}
+
+
+/* buttons*/
+
+.addTodoBtn {
+    padding: .7rem 1rem .7rem 1rem;
+    border-radius: 5px;
+    background-color: rgb(21, 78, 88);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.addTodoBtn:hover {
+    color: white;
+    border-radius: 8px;
+    background-color: #11ad45;
+    transition: all 0.4s ease-out;
+}
+
+
+/*clear button todo-item*/
+
+.clearBtn {
+    float: right;
+    padding: .3rem .6rem .3rem .6rem;
+    border-radius: 5px;
+    background-color: rgb(46, 107, 102);
+    color: white;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.clearBtn:hover {
+    color: white;
+    border-radius: 8px;
+    background-color: #920e2b;
+    transition: all 0.4s ease-out;
+}
+
+.clearAll {
+    padding: .5rem .6rem .5rem .6rem;
+    border-radius: 5px;
+    background-color: rgb(46, 107, 102);
+    color: white;
+    text-decoration: none;
+}
+
+.clearAll:hover {
+    color: white;
+    border-radius: 8px;
+    background-color: #920e2b;
+    transition: all 0.4s ease-out;
+}
+
+
+/* FOOTER settings, container of the footer*/
+
+.footer-container {
+    background-color: #354F52;
+    padding: 2rem 0 2rem 0;
+}
+
+
+/* styled li, index page*/
+
+.styled-li-index {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.styled-li-index.top {
+    margin-top: 0rem;
+}
+
+
+/* footer-content styling*/
+
+.footer {
+    width: 80%;
+    min-height: 20vh;
+    background-color: #354F52;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+/* headings of the footer, titles*/
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.footer-email-form h2 {
+    margin-bottom: 2rem;
+}
+
+
+/* links in footer, styling*/
+
+.footer-heading a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: .5rem;
+}
+
+
+/* hoover effect for footer a links*/
+
+.footer-heading a:hover {
+    border-bottom: solid white 1px;
+    transition: 0.3s ease-out;
+}
+
+
+/* styling for the text-input field sign up*/
+
+#footer-email {
+    width: 15.625rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    padding-left: .5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* placeholder color of the input field*/
+
+#footer-email::placeholder {
+    color: #b1b1b1;
+}
+
+
+/* btn for signing up, footer*/
+
+#footer-email-btn {
+    width: 6.25rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+/* hoover effect of sign up btn*/
+
+#footer-email-btn:hover {
+    background-color: #116934;
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+}
+
+
+/* breaking point, styles below goes to action when screen is 910px or lower*/
+
+@media only screen and (max-width: 1080px) {
+    /* Navbar styling, show toggle button (hamburger nav)*/
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    /* shift navbar to column from row*/
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+    /* set size to navbar text links*/
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+/* breaking point, styles below goes to action when screen is 767px or lower*/
+
+@media only screen and (max-width: 767px) {
+    /* containers*/
+    .flexbox-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    /* hide social in footer, mobile*/
+    .footer-heading.footer-3 {
+        display: none;
+    }
+    .input-addTodo {
+        padding: .8rem 10rem .8rem .5rem;
+        border-radius: 8px;
+        margin-bottom: .5rem;
+        max-width: 15rem;
+    }
+}
