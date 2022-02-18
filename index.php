@@ -22,6 +22,7 @@ if (isset($_POST['todo'])) {
     $todo = $_POST['todo'];
 
     if ($addtodo->setTodo($todo)) {
+        $addtodo->addTodo($todo);
         header("Location:index.php");
     } else {
         echo "<p class='errorMsg'>A task needs atleast 5 characters to be valid.</p>";

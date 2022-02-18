@@ -15,10 +15,16 @@ function __construct() {
 }
 
 // Add Todo
-//public function addTodo(string $description) : bool {
+public function addTodo(string $description) : bool {
     //check with method
-    //if(!$this->description($description)) return false;
-//}
+    if(!$this->setTodo($description)) return false;
+
+    //  SQL query
+    $sql = "INSERT INTO todos(description) VALUES('" . $this->description . "');";
+    // send query
+    return mysqli_query($this->db, $sql);
+
+}
 
 //Set-methods
 function setTodo(string $description) : bool {
