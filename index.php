@@ -14,7 +14,7 @@ include("includes/main-content.php");
 
     <form action="index.php" method="POST">
         <label for="todo">Enter task: </label><br>
-        <input class="input-addTodo" type="text" id="todo" name="todo">
+        <input class="addTodo" type="text" id="todo" name="todo">
         <input class="addTodoBtn" type="submit" name="submit" value="Add Todo">
     </form>
 
