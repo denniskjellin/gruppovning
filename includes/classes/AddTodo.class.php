@@ -14,6 +14,13 @@ function __construct() {
     }
 }
 
+//Connect to database
+function getTodos() : array {
+    $sql = "SELECT * FROM todos";
+    $result = $this->db->query($sql);
+
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 // Add Todo
 public function addTodo(string $description) : bool {
     //check with method
